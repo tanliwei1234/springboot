@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.xr.userapp.mapper.UserMapper">
+
+    <select id="getAllUser" resultType="com.xr.userapp.bean.User">
+        SELECT * FROM user
+    </select>
+
+    <select id="updateUserById" resultType="com.xr.userapp.bean.User">
+        UPDATE user SET
+        name=#{name },age=#{age},sex=#{sex }
+        where id=#{id}
+    </select>
+</mapper>
